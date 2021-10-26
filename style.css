@@ -7,6 +7,7 @@ body {
 
 nav {
     display: flex;
+    margin-right: 30ch;
 }
 
 /* Nav-bar header */
@@ -18,24 +19,22 @@ body>header {
 }
 
 /* List of menu items */
-body>header>nav>ul {
+nav ul {
     list-style: none;
     display: flex;
     padding-left: 0;
     margin: 0;
-    align-items: center;
+    align-items: stretch;
 }
 /* Menu item */
-body>header>nav>ul>li {
+nav li {
     display: flex;
-    align-items: center;
-    height: 100%;
+    align-items: stretch;
 }
 
 
-body>header>nav>ul>li>a {
+nav a {
     background-color: royalblue;
-    height: 100%;
     padding: 0px 20px 0px 20px;
     display: flex;
     align-items: center;
