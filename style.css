@@ -1,66 +1,160 @@
-body {
+* {
     font-family: sans-serif;
+}
+
+body {
     width: 1024px;
     margin: auto;
-    background-color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+/*-----------------------
+    Navigation (nav/header)
+-------------------------*/
+body>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    height: 70px;
+    background: rgb(231, 231, 231);
+    border-bottom: 2px solid rgb(210, 210, 210);
+}
+
+header>h1 {
+    margin-left: 20px;
+}
+
+header>a {
+    margin-right: 20px;
 }
 
 nav {
+    height: 100%;
     display: flex;
-    margin-right: 30ch;
+    margin-right: 150px;
 }
 
-/* Nav-bar header */
-body>header {
-    background-color: tomato;
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-}
-
-/* List of menu items */
 nav ul {
-    list-style: none;
-    display: flex;
     padding-left: 0;
     margin: 0;
+    list-style: none;
+    display: flex;
     align-items: stretch;
 }
-/* Menu item */
+
 nav li {
     display: flex;
     align-items: stretch;
 }
 
-
 nav a {
-    background-color: royalblue;
-    padding: 0px 20px 0px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 125px;
 }
 
-.center-contents {
+/*-----------------------
+    Main content (main)
+-------------------------*/
+main{
+    width: 70%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.fill-vertical {
-    height: 100%;
+main>h2,
+main>p,
+main>article,
+aside {
+    margin: 20px;
 }
 
-/* Login/Home button */
-body>header>a {
-    background-color: lightblue;
-    padding: 0px 20px 0px 20px;
+main>h2 {
+    width: max-content;
+}
+
+article {
+    flex: 1;
+    padding: 10px;
+}
+
+article>img {
+    width: 100%;
+}
+
+/*-----------------------
+    Side content (aside)
+-------------------------*/
+aside {
+    flex-grow: 1;
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul,
+aside ol {
+    padding: 0;
+    list-style-position: inside;
+}
+
+/*-----------------------
+    Bottom content (footer)
+-------------------------*/
+footer{
+    height: 50px;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: rgb(44, 44, 44);
+    color: whitesmoke;
 }
 
-/* Text Logo */
-body>header>h1 {
-    margin-top: 0%;
+
+/*-----------------------
+        General class styling
+-------------------------*/
+p,h1,h2,h3,a {
+    color: rgb(26, 26, 26);
+}
+
+.content-box{
+    background: rgb(240, 240, 240);
+    box-shadow: 5px 5px 10px rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    background: rgb(241, 179, 21);
+    border-radius: 100px;
+}
+
+.btn-primary:hover{
+    background: rgb(226, 179, 59);
+}
+
+.btn-secondary {
+    background: none;
+    text-decoration: none;
+    transition: background 300ms;
+}
+
+.btn-secondary:hover {
+    background: rgba(26, 26, 26, 0.02);
 }
