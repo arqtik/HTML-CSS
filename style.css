@@ -61,8 +61,8 @@ nav a {
 /*-----------------------
     Main content (main)
 -------------------------*/
-main{
-    width: 70%;
+main {
+    flex: 3;
     display: flex;
     flex-wrap: wrap;
 }
@@ -87,11 +87,16 @@ article>img {
     width: 100%;
 }
 
+main>article:nth-of-type(1)>p:nth-of-type(2) {
+    font-weight: 700;
+    color: blue;
+}
+
 /*-----------------------
     Side content (aside)
 -------------------------*/
 aside {
-    flex-grow: 1;
+    flex: 1;
     text-align: center;
 }
 
@@ -104,13 +109,22 @@ aside ol {
     padding: 0;
     list-style-position: inside;
 }
+aside ul>li:nth-child(even),
+aside ul>li:nth-child(even)>h3{
+    color: red;
+}
+
+aside ul>li:nth-child(odd),
+aside ul>li:nth-child(odd)>h3{
+    color: green;
+}
 
 /*-----------------------
     Bottom content (footer)
 -------------------------*/
-footer{
+footer {
     height: 50px;
-    flex-grow: 1;
+    flex: 1 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,13 +135,17 @@ footer{
 
 
 /*-----------------------
-        General class styling
+    Classes & styling
 -------------------------*/
-p,h1,h2,h3,a {
+p,
+h1,
+h2,
+h3,
+a {
     color: rgb(26, 26, 26);
 }
 
-.content-box{
+.content-box {
     background: rgb(240, 240, 240);
     box-shadow: 5px 5px 10px rgb(230, 230, 230);
     border-radius: 10px;
@@ -145,16 +163,53 @@ p,h1,h2,h3,a {
     border-radius: 100px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background: rgb(226, 179, 59);
 }
 
 .btn-secondary {
     background: none;
     text-decoration: none;
-    transition: background 300ms;
+    transition: background-color 300ms;
 }
 
 .btn-secondary:hover {
-    background: rgba(26, 26, 26, 0.02);
+    background-color: rgba(26, 26, 26, 0.02);
+}
+
+.centered-form {
+    height: 50ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-form>form{
+    display: flex;
+    border: 10px solid gainsboro;
+    border-radius: 10px;
+}
+
+.centered-form>h2 {
+    margin-right: 680px;
+    text-transform: uppercase;
+}
+
+.btn-form,
+.input-form{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-form{
+    padding: 12px 36px;
+}
+
+.btn-login {
+    background-color: rgb(90, 206, 90);
+}
+
+.btn-reset {
+    background-color: rgb(233, 89, 89);
 }
